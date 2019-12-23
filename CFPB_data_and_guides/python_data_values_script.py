@@ -1,7 +1,7 @@
 import pandas as pd
 
 #Adjust the path to where you have saved the data
-df = pd.read_csv("./NFWBS_PUF_2016_data.csv")
+df = pd.read_csv("data_narrowed.csv")
 
 #Map values
 df = df.replace({"sample":{
@@ -14,7 +14,6 @@ df = df.replace({"sample":{
   2: "100%-199% FPL",
   3: "200%+ FPL"
 },
-
 "FWBscore":{
   -4: "Response not written to database",
   -1: "Refused"
