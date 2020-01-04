@@ -44,7 +44,8 @@
       <div class="col-md-12">
         <div class="m-4 p-5 shadow bg-white rounded">
           <h3 class="display-5">Visualizing CFPB Financial Wellness Data</h3>
-          <p class="lead p-4">In 2016 the federal Consumer Financial Protection Bureau (CFPB) conducted a survey of more than 6,000 Americans to assess their financial wellness. The survey used 10 basic question to product a Financial Wellness Score of between 1 and 100. A host of other demographic and financial questions provided a rich picture of the economic situation with a high level of detail and large sample size.</p>    
+          <!-- <p class="lead p-4">In 2016 the federal Consumer Financial Protection Bureau (CFPB) conducted a survey of more than 6,000 Americans to assess their financial wellness. The survey used 10 basic question to product a Financial Wellness Score of between 1 and 100. A host of other demographic and financial questions provided a rich picture of the economic situation with a high level of detail and large sample size.</p>     -->
+        <div id="test1"></div>
         </div>
       </div>
     </div>
@@ -55,12 +56,7 @@
             <div class="ml-4 mr-4 mt-2 mb-2 p-5 shadow bg-white rounded">
                 <h4>Comparing Financial Wellness Across Demographics</h4>
                 <p class="lead">-Commentary on the chart can go here</p>
-                <div class="chart1">
-                    <!-- Placeholder rect -->
-                    <svg width = "700" height = "400">
-                    <rect width = "699" height = "399" stroke  = "blue" fill = "white"/>
-                    </svg>
-                </div>
+                <div id="chart1"></div>
             </div>
         </div>
     </div>
@@ -71,7 +67,7 @@
       <div class="ml-4 mr-4 mt-2 mb-2 p-5 shadow bg-white rounded">
           <h4>--- Second Chart ---</h4>
           <p class="lead">-Commentary on the chart can go here</p>
-          <div class="chart2">
+          <div id="chart2">
               <!-- Placeholder rect -->
               <svg width = "700" height = "400">
               <rect width = "699" height = "399" stroke  = "blue" fill = "white"/>
@@ -87,7 +83,7 @@
       <div class="ml-4 mr-4 mt-2 mb-2 p-5 shadow bg-white rounded">
           <h4>-- Third Chart</h4>
           <p class="lead">-Commentary on the chart can go here</p>
-          <div class="chart3">
+          <div id="chart3">
               <!-- Placeholder rect -->
               <svg width = "700" height = "400">
               <rect width = "699" height = "399" stroke  = "blue" fill = "white"/>
@@ -100,7 +96,10 @@
 
 
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript" src="static/js/d3-tip.js"></script>
+<script type="text/javascript" src="static/js/app.js"></script>
 </body>
 
 </html>
