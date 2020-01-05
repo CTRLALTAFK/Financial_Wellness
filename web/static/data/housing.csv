@@ -1,19 +1,19 @@
-﻿Group,Never,Sometimes,Often
-"Black, Non-Hispanic",82.63,11.68,5.11
-Hispanic,82.17,12.34,4.69
-"Other, Non-Hispanic",85.71,9.23,4.17
-"White, Non-Hispanic",93.75,4.29,1.69
-"Less than $20,000",73.85,15.16,10.29
-"$20,000 to $29,999",83.99,10.87,4.55
-"$30,000 to $39,999",88.6,8.31,2.77
-"$40,000 to $49,999",88.44,7.71,2.57
-"$50,000 to $59,999",91.09,6.53,2.38
-"$60,000 to $74,999",95.39,3.69,0.92
-"$75,000 to $99,999",93.51,4.92,1.26
-"$100,000 to $149,999",96.23,2.96,0.54
-"$150,000 or more",96.29,2.78,0.46
-Pre-Boomer,98.38,1.17,0.36
-Boomer,95.07,3.6,1.15
-Gen X,88.11,8.46,3.08
-Millennial,80.93,12.32,5.75
-All,90.55,6.44,2.6
+﻿Group,Category,Never,Sometimes,Often
+"Black, Non-Hispanic",Ethnicity,82.63,11.68,5.11
+Hispanic,Ethnicity,82.17,12.34,4.69
+"Other, Non-Hispanic",Ethnicity,85.71,9.23,4.17
+"White, Non-Hispanic",Ethnicity,93.75,4.29,1.69
+Less than $20K,Income,73.85,15.16,10.29
+$20K to $29K,Income,83.99,10.87,4.55
+$30K to $39K,Income,88.6,8.31,2.77
+$40K to $49K,Income,88.44,7.71,2.57
+$50K to $59K,Income,91.09,6.53,2.38
+$60K to $74K,Income,95.39,3.69,0.92
+$75K to $99K,Income,93.51,4.92,1.26
+$100K to $149K,Income,96.23,2.96,0.54
+$150K or more,Income,96.29,2.78,0.46
+Pre-Boomer,Generation,98.38,1.17,0.36
+Boomer,Generation,95.07,3.6,1.15
+Gen X,Generation,88.11,8.46,3.08
+Millennial,Generation,80.93,12.32,5.75
+All,All Respondents,90.55,6.44,2.6
