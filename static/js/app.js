@@ -1,10 +1,10 @@
 
 // Load data
-d3.csv("data/money_left.csv").then(d => chart1(d))
-d3.csv("data/2000_expense.csv").then(d => chart2(d))
-d3.csv("data/rejected_credit.csv").then(d => chart3(d))
-d3.csv("data/payday.csv").then(d => chart4(d))
-d3.csv("data/housing.csv").then(d => chart5(d))
+d3.csv("../data/money_left.csv").then(d => chart1(d))
+d3.csv("../data/2000_expense.csv").then(d => chart2(d))
+d3.csv("../data/rejected_credit.csv").then(d => chart3(d))
+d3.csv("../data/payday.csv").then(d => chart4(d))
+d3.csv("../data/housing.csv").then(d => chart5(d))
 
 // Draw Chart 1 -- Money Left at end of month
 function chart1(csv) {
