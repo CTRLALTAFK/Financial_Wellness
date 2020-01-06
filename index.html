@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CFPB Financial Wellness Data</title>
+  
+ <!-- Bootstrap Components--> 
+  <link rel="stylesheet" href="static/css/bootstrap-flatly.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  
+<div class="container">
+ 
+  <!-- Navigation -->
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary mr-1 ml-1 mb-5 rounded shadow-lg">
+          <a class = "navbar-brand" href = "#">Financial Wellness Project Team</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ml-4 mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mapping.html">Mapping</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://www.consumerfinance.gov/data-research/financial-well-being-survey-data/" target="_blank">Source Data</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    
+    <!-- Intro text -->
+    <div class="row mt-5">
+      <div class="col-md-12">
+        <div class="m-1 p-4 shadow bg-white rounded">
+          <h3 class="display-5 mt-4">Visualizing CFPB Financial Wellness Data</h3>
+          <p class="lead pt-2">In 2016 the federal Consumer Financial Protection Bureau (CFPB) conducted a survey of more than 6,000 Americans to assess their financial wellness. The survey used 10 basic question to product a Financial Wellness Score of between 1 and 100. A host of other demographic and financial questions provided a rich picture of the economic situation with a high level of detail and large sample size.<br><br>A sample of responses divided out by ethnicity, income, and generation follows:</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Chart1 Money Left-->
+    <div class="row border-bottom border-primary">
+      <div class="col-md-12">
+          <div class="ml-1 mr-1 mt-4 mb-4 p-3">
+              <h4>"I have money left over at the end of the month..."</h4>
+              <p class="lead">Large variation by income and generation, somewhat less variation by ethnicity</p>
+              <div><p>Select demographic category:</p><select id="category1"></select></div>  
+              <svg id="chart1" width="800" height="500"></svg>
+          </div>
+      </div>
+    </div>
+
+      <!-- Chart2 Afford $2000 Expense -->
+      <div class="row border-bottom border-primary">
+        <div class="col-md-12">
+            <div class="ml-1 mr-1 mt-4 mb-4 p-3">
+                <h4>Could come up with $2,000 for an unexpected expense within 30 days...</h4>
+                <p class="lead">Large variation by income and generation, and significant variation by ethnicity</p>
+                <div><p>Select demographic category:</p><select id="category2"></select></div>  
+                <svg id="chart2" width="800" height="500"></svg>
+            </div>
+        </div>
+      </div>
+
+    <!-- Chart3 Rejected for credit -->
+    <div class="row border-bottom border-primary">
+      <div class="col-md-12">
+          <div class="ml-1 mr-1 mt-4 mb-4 p-3">
+              <h4>Applied for credit and turned down within past 12 months...</h4>
+              <p class="lead">Significant variance by income, ethnicity, and generation</p>
+              <div><p>Select demographic category:</p><select id="category3"></select></div>  
+              <svg id="chart3" width="800" height="500"></svg>
+          </div>
+      </div>
+    </div>
+
+    <!-- Chart4 Payday loan -->
+    <div class="row border-bottom border-primary">
+      <div class="col-md-12">
+          <div class="ml-1 mr-1 mt-4 mb-4 p-3">
+              <h4>Payday loan or cash advance loan in past 12 months...</h4>
+              <p class="lead">Low levels overall, with higher use among people of color, lower income brackets, and Millennials</p>
+              <div><p>Select demographic category:</p><select id="category4"></select></div>  
+              <svg id="chart4" width="800" height="500"></svg>
+          </div>
+      </div>
+    </div>
+
+    <!-- Chart5 Housing -->
+    <div class="row border-bottom border-primary">
+        <div class="col-md-12">
+            <div class="ml-1 mr-1 mt-4 mb-4 p-3">
+                <h4>"I couldn't afford a place to live" within the past 12 months...</h4>
+                <p class="lead">Higher level of distress among people of color, lower income brackets, and Millennials</p>
+                <div><p>Select demographic category:</p><select id="category5"></select></div>  
+                <svg id="chart5" width="800" height="500"></svg>
+            </div>
+        </div>
+    </div>
+
+  <!-- Last Chart -->
+  <div class="row">
+    <div class="col-md-12">
+        <div class="ml-1 mr-1 mt-2 mb-2 p-3">
+            <h4>--- Last chart ---</h4>
+            <p class="lead">-Commentary on the chart can go here</p>
+            <div id="chart2">
+                <!-- Placeholder rect -->
+                <svg width = "800" height = "500">
+                <rect width = "799" height = "499" stroke  = "blue" fill = "white"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<!-- End of container -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script type="text/javascript" src="static/js/d3-tip.js"></script>
+<script type="text/javascript" src="static/js/app.js"></script>
+</body>
+
+</html>
