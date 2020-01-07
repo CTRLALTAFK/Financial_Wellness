@@ -1,19 +1,28 @@
-
 // Load data
-d3.csv("/Financial_Wellness/static/data/money_left.csv").then(d => chart1(d))
-d3.csv("/Financial_Wellness/static/data/2000_expense.csv").then(d => chart2(d))
-d3.csv("/Financial_Wellness/static/data/rejected_credit.csv").then(d => chart3(d))
-d3.csv("/Financial_Wellness/static/data/payday.csv").then(d => chart4(d))
-d3.csv("/Financial_Wellness/static/data/housing.csv").then(d => chart5(d))
+d3.json("/data").then(d => {
+	console.log('your data', d)
+	var leftOver_money = d['money_leftover'] 
+	chart1(leftOver_money)
+
+	var affordExpense = d['afford_expense']
+	chart2(affordExpense)
+})
+
+// d3.csv("/static/data/money_left.csv").then(d => chart1(d))
+// d3.csv("/static/data/2000_expense.csv").then(d => chart2(d))
+// d3.csv("/static/data/rejected_credit.csv").then(d => chart3(d))
+// d3.csv("/static/data/payday.csv").then(d => chart4(d))
+// d3.csv("/static/data/housing.csv").then(d => chart5(d))
 
 // Draw Chart 1 -- Money Left at end of month
-function chart1(csv) {
+function chart1(datum) {
+	console.log(datum)
+	// // Get data for gets 
+	//var keys = csv.columns.slice(2);
+	var keys = Object.keys(datum[0]) 
 
-	// Get data for gets 
-	var keys = csv.columns.slice(2);
-
-	// Get the names for the demographic categories
-	var category   = [...new Set(csv.map(d => d.Category))]
+	// // Get the names for the demographic categories
+	var category   = [...new Set(datum.map(d => d.Category))]
 
 	// Create dropdown for choosing demographic categories
 	var options = d3.select("#category1").selectAll("option")
@@ -54,7 +63,7 @@ function chart1(csv) {
 	function update(input, speed) {
 
 		// Gets the data filtered by the chosen category
-		var data = csv.filter(f => f.Category == input)
+		var data = datum.filter(f => f.Category == input)
 
 		// Calcs total of values
 		data.forEach(function(d) {
@@ -168,7 +177,7 @@ function chart1(csv) {
 //---------------------------------
 
 // Draw Chart 2 -- $2000 Expense
-function chart2(csv) {
+function chart2() {
 
 	// Get data for gets 
 	var keys = csv.columns.slice(2);
