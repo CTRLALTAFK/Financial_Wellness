@@ -2,8 +2,11 @@
 // Load data
 d3.json("/data").then(d => {
 	console.log('your data', d)
-	var leftOver_money = d['money_leftover']
-	chart1(expenseData)
+	var leftOver_money = d['money_leftover'] 
+	chart1(leftOver_money)
+
+	var affordExpense = d['afford_expense']
+	chart2(affordExpense)
 })
 
 // d3.csv("/static/data/money_left.csv").then(d => chart1(d))

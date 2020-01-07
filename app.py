@@ -27,6 +27,10 @@ def data():
 
     myData = {
         "afford_expense": afford_expense,
+        "housing": housing,
+        "money_leftover" : money_leftover,
+        "payday_loan" : payday_loan,
+        "rejected_credit" : rejected_credit
         }
 
     return jsonify(myData)
