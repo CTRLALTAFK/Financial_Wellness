@@ -1,6 +1,10 @@
 import pandas as pd
 
+<<<<<<< HEAD
 #Adjust the path to where you have saved the data
+=======
+#Adjust the path to where you have saved the csv
+>>>>>>> df176d0d1e41e73a4af582065bcaf61cfebd1ee5
 df = pd.read_csv("data_narrowed.csv")
 
 #Map values
