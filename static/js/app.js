@@ -1,16 +1,10 @@
 
 // Load data
-d3.json("/data").then(d => {
-	console.log('your data', d)
-	var leftOver_money = d['money_leftover']
-	chart1(expenseData)
-})
-
-// d3.csv("/static/data/money_left.csv").then(d => chart1(d))
-// d3.csv("/static/data/2000_expense.csv").then(d => chart2(d))
-// d3.csv("/static/data/rejected_credit.csv").then(d => chart3(d))
-// d3.csv("/static/data/payday.csv").then(d => chart4(d))
-// d3.csv("/static/data/housing.csv").then(d => chart5(d))
+d3.csv("/Financial_Wellness/static/data/money_left.csv").then(d => chart1(d))
+d3.csv("/Financial_Wellness/static/data/2000_expense.csv").then(d => chart2(d))
+d3.csv("/Financial_Wellness/static/data/rejected_credit.csv").then(d => chart3(d))
+d3.csv("/Financial_Wellness/static/data/payday.csv").then(d => chart4(d))
+d3.csv("/Financial_Wellness/static/data/housing.csv").then(d => chart5(d))
 
 // Draw Chart 1 -- Money Left at end of month
 function chart1(csv) {
@@ -174,7 +168,7 @@ function chart1(csv) {
 //---------------------------------
 
 // Draw Chart 2 -- $2000 Expense
-function chart2() {
+function chart2(csv) {
 
 	// Get data for gets 
 	var keys = csv.columns.slice(2);

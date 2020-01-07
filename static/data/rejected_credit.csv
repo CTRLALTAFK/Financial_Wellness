@@ -1,0 +1,19 @@
+﻿Group,Category,No,Yes
+"Black, Non-Hispanic",Ethnicity,75.77,22.34
+Hispanic,Ethnicity,84.91,13.14
+"Other, Non-Hispanic",Ethnicity,89.58,8.63
+"White, Non-Hispanic",Ethnicity,91.53,7.67
+"Less than $20,000",Income,76.36,21.56
+"$20,000 to $29,999",Income,81.23,17.19
+"$30,000 to $39,999",Income,85.34,13.52
+"$40,000 to $49,999",Income,85.65,11.78
+"$50,000 to $59,999",Income,89.9,9.5
+"$60,000 to $74,999",Income,90.78,8.76
+"$75,000 to $99,999",Income,93.09,6.18
+"$100,000 to $149,999",Income,93.09,6.1
+"$150,000 or more",Income,95.59,3.48
+Pre-Boomer,Generation,95.59,3.15
+Boomer,Generation,92.1,7.15
+Gen X,Generation,85.73,13.29
+Millennial,Generation,82.3,16.01
+All,All Respondents,88.83,10.04

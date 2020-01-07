@@ -10,8 +10,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+
 </head>
 
 <body>
@@ -33,7 +32,10 @@
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="mapping.html">Mapping</a>
+                <a class="nav-link" href="/mapping">Mapping</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/ethnicity">Ethnicity</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://www.consumerfinance.gov/data-research/financial-well-being-survey-data/" target="_blank">Source Data</a>
@@ -114,57 +116,21 @@
         </div>
     </div>
 
-  <!-- Last Chart Chart.js-->
-  <div class="row border-bottom border-primary">
+  <!-- Last Chart -->
+  <div class="row">
     <div class="col-md-12">
-        <div class="ml-1 mr-1 mt-4 mb-4 p-3">
-            <h4>"Median financial wellbeing score by demographic"</h4>
-            <p class="lead">Higher level of distress among people of color, lower income brackets, and Millennials</p>
-            <div><p>Select demographic category:</p><select id="category5"></select></div>  
-            <svg id="chart5" width="800" height="500"></svg>
-            <canvas id="myChart" width="400" height="400"></canvas>
-<script>
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-</script>
+        <div class="ml-1 mr-1 mt-2 mb-2 p-3">
+            <h4>--- Last chart ---</h4>
+            <p class="lead">-Commentary on the chart can go here</p>
+            <div id="chart2">
+                <!-- Placeholder rect -->
+                <svg width = "800" height = "500">
+                <rect width = "799" height = "499" stroke  = "blue" fill = "white"/>
+                </svg>
+            </div>
         </div>
     </div>
-</div>
+  </div>
 
 <!-- End of container -->
 </div>
