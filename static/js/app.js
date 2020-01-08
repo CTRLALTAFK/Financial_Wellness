@@ -8,17 +8,17 @@ d3.json("/data").then(d => {
 	chart2(affordExpense)
 })
 
-// d3.csv("/static/data/money_left.csv").then(d => chart1(d))
-// d3.csv("/static/data/2000_expense.csv").then(d => chart2(d))
-// d3.csv("/static/data/rejected_credit.csv").then(d => chart3(d))
-// d3.csv("/static/data/payday.csv").then(d => chart4(d))
-// d3.csv("/static/data/housing.csv").then(d => chart5(d))
+// d3.datum("/static/data/money_left.datum").then(d => chart1(d))
+// d3.datum("/static/data/2000_expense.datum").then(d => chart2(d))
+// d3.datum("/static/data/rejected_credit.datum").then(d => chart3(d))
+// d3.datum("/static/data/payday.datum").then(d => chart4(d))
+// d3.datum("/static/data/housing.datum").then(d => chart5(d))
 
 // Draw Chart 1 -- Money Left at end of month
 function chart1(datum) {
 	console.log(datum)
 	// // Get data for gets 
-	//var keys = csv.columns.slice(2);
+	//var keys = datum.columns.slice(2);
 	var keys = Object.keys(datum[0]) 
 
 	// // Get the names for the demographic categories
@@ -177,13 +177,13 @@ function chart1(datum) {
 //---------------------------------
 
 // Draw Chart 2 -- $2000 Expense
-function chart2() {
-
+function chart2(datum) {
+	
 	// Get data for gets 
-	var keys = csv.columns.slice(2);
+	var keys = Object.keys(datum[0]); 
 
 	// Get the names for the demographic categories
-	var category   = [...new Set(csv.map(d => d.Category))]
+	var category   = [...new Set(datum.map(d => d.Category))]
 
 	// Create dropdown for choosing demographic categories
 	var options = d3.select("#category2").selectAll("option")
@@ -224,7 +224,7 @@ function chart2() {
 	function update(input, speed) {
 
 		// Gets the data filtered by the chosen category
-		var data = csv.filter(f => f.Category == input)
+		var data = datum.filter(f => f.Category == input)
 
 		// Calcs total of values
 		data.forEach(function(d) {
@@ -337,13 +337,13 @@ function chart2() {
 //-------------------------------------
 
 // Draw Chart 3 -- Rejected for credit
-function chart3(csv) {
+function chart3(datum) {
 
 	// Get data for gets 
-	var keys = csv.columns.slice(2);
+	var keys = datum.columns.slice(2);
 
 	// Get the names for the demographic categories
-	var category   = [...new Set(csv.map(d => d.Category))]
+	var category   = [...new Set(datum.map(d => d.Category))]
 
 	// Create dropdown for choosing demographic categories
 	var options = d3.select("#category3").selectAll("option")
@@ -384,7 +384,7 @@ function chart3(csv) {
 	function update(input, speed) {
 
 		// Gets the data filtered by the chosen category
-		var data = csv.filter(f => f.Category == input)
+		var data = datum.filter(f => f.Category == input)
 
 		// Calcs total of values
 		data.forEach(function(d) {
@@ -498,13 +498,13 @@ function chart3(csv) {
 //---------------------------------------
 
 // Draw Chart 4 -- Payday loans
-function chart4(csv) {
+function chart4(datum) {
 
 	// Get data for gets 
-	var keys = csv.columns.slice(2);
+	var keys = datum.columns.slice(2);
 
 	// Get the names for the demographic categories
-	var category   = [...new Set(csv.map(d => d.Category))]
+	var category   = [...new Set(datum.map(d => d.Category))]
 
 	// Create dropdown for choosing demographic categories
 	var options = d3.select("#category4").selectAll("option")
@@ -545,7 +545,7 @@ function chart4(csv) {
 	function update(input, speed) {
 
 		// Gets the data filtered by the chosen category
-		var data = csv.filter(f => f.Category == input)
+		var data = datum.filter(f => f.Category == input)
 
 		// Calcs total of values
 		data.forEach(function(d) {
@@ -659,13 +659,13 @@ function chart4(csv) {
 //-----------------------------------------
 
 // Draw Chart 5 -- Housing distress
-function chart5(csv) {
+function chart5(datum) {
 
 	// Get data for plot 
-	var keys = csv.columns.slice(2);
+	var keys = datum.columns.slice(2);
 
 	// Get the names for the demographic categories
-	var category   = [...new Set(csv.map(d => d.Category))]
+	var category   = [...new Set(datum.map(d => d.Category))]
 
 	// Create dropdown for choosing demographic categories
 	var options = d3.select("#category5").selectAll("option")
@@ -706,7 +706,7 @@ function chart5(csv) {
 	function update(input, speed) {
 
 		// Gets the data filtered by the chosen category
-		var data = csv.filter(f => f.Category == input)
+		var data = datum.filter(f => f.Category == input)
 
 		// Calcs total of values
 		data.forEach(function(d) {
