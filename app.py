@@ -39,10 +39,10 @@ def data():
         item.pop('_id')
         payday_loan.append(item)
 
-    rejected_credit = []
-    for item in db.rejected_credit.find():
-        item.pop('_id')
-        rejected_credit.append(item)
+    # rejected_credit = []
+    # for item in db.rejected_credit.find():
+    #     item.pop('_id')
+    #     rejected_credit.append(item)
 
 #     json_docs = []
 # for doc in cursor:
@@ -55,7 +55,7 @@ def data():
         "housing": housing,
         "money_leftover" : money_leftover,
         "payday_loan" : payday_loan,
-        "rejected_credit" : rejected_credit
+        # "rejected_credit" : rejected_credit
         }
 
     print(myData)
