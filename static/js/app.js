@@ -1,14 +1,14 @@
 // Load data
 d3.json("/data").then(d => {
-	console.log('your data', d)
+	
 	var leftOver_money = d['money_leftover'] 
 	chart1(leftOver_money)
 
 	var affordExpense = d['afford_expense']
 	chart2(affordExpense)
 
-	var rejected_credit  = d['rejected_credit ']
-	chart3(rejected_credit )
+	var rejected_credit  = d['rejected_credit']
+	chart3(rejected_credit)
 
 	var payday_loan = d['payday_loan']
 	chart4(payday_loan)
@@ -28,7 +28,7 @@ function chart1(datum) {
 	console.log(datum)
 	// // Get data for gets 
 	//var keys = datum.columns.slice(2);
-	var keys = Object.keys(datum[0]); 
+	var keys = Object.keys(datum[2]); 
 
 	// // Get the names for the demographic categories
 	var category   = [...new Set(datum.map(d => d.Category))]
@@ -347,7 +347,7 @@ function chart2(datum) {
 
 // Draw Chart 3 -- Rejected for credit
 function chart3(datum) {
-
+	
 	// Get data for gets 
 	var keys = Object.keys(datum[0]); 
 
