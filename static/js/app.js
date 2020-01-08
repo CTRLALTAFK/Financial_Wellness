@@ -6,6 +6,15 @@ d3.json("/data").then(d => {
 
 	var affordExpense = d['afford_expense']
 	chart2(affordExpense)
+
+	var rejected_credit  = d['rejected_credit ']
+	chart3(rejected_credit )
+
+	var payday_loan = d['payday_loan']
+	chart4(payday_loan)
+
+	var housing = d['housing']
+	chart5(housing)
 })
 
 // d3.datum("/static/data/money_left.datum").then(d => chart1(d))
@@ -19,7 +28,7 @@ function chart1(datum) {
 	console.log(datum)
 	// // Get data for gets 
 	//var keys = datum.columns.slice(2);
-	var keys = Object.keys(datum[0]) 
+	var keys = Object.keys(datum[0]); 
 
 	// // Get the names for the demographic categories
 	var category   = [...new Set(datum.map(d => d.Category))]
@@ -340,7 +349,7 @@ function chart2(datum) {
 function chart3(datum) {
 
 	// Get data for gets 
-	var keys = datum.columns.slice(2);
+	var keys = Object.keys(datum[0]); 
 
 	// Get the names for the demographic categories
 	var category   = [...new Set(datum.map(d => d.Category))]
@@ -501,7 +510,7 @@ function chart3(datum) {
 function chart4(datum) {
 
 	// Get data for gets 
-	var keys = datum.columns.slice(2);
+	var keys = Object.keys(datum[0]); 
 
 	// Get the names for the demographic categories
 	var category   = [...new Set(datum.map(d => d.Category))]
@@ -662,7 +671,7 @@ function chart4(datum) {
 function chart5(datum) {
 
 	// Get data for plot 
-	var keys = datum.columns.slice(2);
+	var keys = Object.keys(datum[0]); 
 
 	// Get the names for the demographic categories
 	var category   = [...new Set(datum.map(d => d.Category))]

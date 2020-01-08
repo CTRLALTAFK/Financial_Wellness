@@ -12,9 +12,9 @@ def index():
 
     return render_template("index.html")
 @app.route('/ethnicity')
-def ethnicity():
-    print('i am page')
-# function that renders the ethnicity html template
+#def ethnicity():
+   
+# function that renders the html template
 
 @app.route("/data")
 def data():
@@ -23,24 +23,39 @@ def data():
     for item in db.afford_expense.find():
         item.pop('_id')
         afford_expense.append(item)
-    housing = db.housing.find()
-    money_leftover =[]
+    
+    housing = []
+    for item in db.housing.find():
+        item.pop('_id')
+        housing.append(item)
+    
+    money_leftover = []
     for item in db.money_leftover.find():
         item.pop('_id')
         money_leftover.append(item)
+
+    payday_loan = []
+    for item in db.payday_loan.find():
+        item.pop('_id')
+        payday_loan.append(item)
+
+    rejected_credit = []
+    for item in db.rejected_credit.find():
+        item.pop('_id')
+        rejected_credit.append(item)
+
 #     json_docs = []
 # for doc in cursor:
 #     json_doc = json.dumps(doc, default=json_util.default)
 #     json_docs.append(json_doc)
-    payday_loan = db.payday_loan.find()
-    rejected_credit = db.rejected_credit.find()
+   
 
     myData = {
         "afford_expense": afford_expense,
-        # "housing": housing,
+        "housing": housing,
         "money_leftover" : money_leftover,
-        # "payday_loan" : payday_loan,
-        # "rejected_credit" : rejected_credit
+        "payday_loan" : payday_loan,
+        "rejected_credit" : rejected_credit
         }
 
     print(myData)
