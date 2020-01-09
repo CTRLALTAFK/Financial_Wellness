@@ -25,10 +25,10 @@ d3.json("/data").then(d => {
 
 // Draw Chart 1 -- Money Left at end of month
 function chart1(datum) {
-	console.log(datum)
+	
 	// // Get data for gets 
 	//var keys = datum.columns.slice(2);
-	var keys = Object.keys(datum[2]); 
+	var keys = Object.keys(datum[0]).forEach(item,key); 
 
 	// // Get the names for the demographic categories
 	var category   = [...new Set(datum.map(d => d.Category))]
