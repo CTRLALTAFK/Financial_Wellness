@@ -13,7 +13,9 @@ def index():
     return render_template("index.html")
 @app.route('/ethnicity')
 #def ethnicity():
-   
+def ethnicity():
+
+    return render_template("ethnicity.html")
 # function that renders the html template
 
 @app.route("/data")
