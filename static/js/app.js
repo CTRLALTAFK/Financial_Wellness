@@ -28,13 +28,8 @@ function chart1(datum) {
 	
 	// // Get data for gets 
 	//var keys = datum.columns.slice(2);
-<<<<<<< HEAD
-	var keys = Object.keys(datum[0]).forEach(item,key); 
-
-=======
 	var keys = ["Always", "Often", "Sometimes", "Rarely","Never"]; 
 	console.log(keys)
->>>>>>> 020a0e05e570d8cd16431279d28bc53d01e0fe86
 	// // Get the names for the demographic categories
 	var category   = [...new Set(datum.map(d => d.Category))]
 
