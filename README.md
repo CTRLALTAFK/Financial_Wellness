@@ -6,6 +6,7 @@ Interactive graphs with data from the Consumer Financial Protection Bureau that 
 • Used Python (pandas, pymongo) to scrub data.
 • Created an app with python to clean up CSVs, sent them to flask and then MongoDB (NoSQL) database.
 •Lastly, created a site with interactive graphs using JavaScript and D3. 
+![](images/0.png)This is what the landing page looks like. The rest of the pictures on this ReadMe show what happens when you click on the drop down menus.
 ![](images/1.png)
 ![](images/2.png)
 ![](images/3.png)
